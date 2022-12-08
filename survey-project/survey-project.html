@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please take a moment to give us your feedback</p>
+    <div>
+        
+      <form id="survey-form">
+
+        <fieldset>
+            <!-- Personal Info Text Boxes-->
+            <label id="name-label" for="name">What is your name? 
+                <input id="name" type="text" placeholder="Jane Smith" required></label>
+
+            <label id="email-label" for="email">What is your email address? 
+                <input id="email" type="email" placeholder="email@site.com" required></label>
+
+            <label id="number-label" for="number">How old are you? 
+                <input id="number" type="number" pattern="[0-9]{2,}" min="13" max="120" placeholder="18" required></label>
+            
+            <!-- Role Selection Dropdown-->
+            <label for="dropdown">How would you describe your current role?
+            <select id="dropdown">
+              <option value="">(select one)</option>
+              <option value="hobbyist">Hobbyist</option>
+              <option value="studen">Student</option>
+              <option value="professional">Professional</option>
+            </select>
+            </label>
+
+            <!-- Recommendation Radio Buttons-->
+            <label id="recommend-label" for="recommend">Would you recommend us to your friends?
+                <input type="radio" name="recommend" id="yes" value="Yes">
+                <label for="yes">Yes</label>
+                <input type="radio" name="recommend" id="no" value="No">
+                <label for="no">No</label> 
+            </label>
+
+            <!-- Checkbox Suggestions-->
+            <label id="suggestions" for="checkbox-suggestions">
+                Is there anything you'd like to see improved? Check all that apply:</label>
+
+                <label for="more-info"><input type="checkbox" id="more-info" value="more-info">
+                More information & explanations</label>
+                <label for="response-time"><input type="checkbox" id="response-time" value="response-time">
+                Faster response times and delivery of information</label>
+                <label for="lower-prices"><input type="checkbox" id="lower-prices" value="lower-prices">
+                Lower prices</label>
+
+            <!-- Text area custom feedback-->
+            <label for="custom-feedback">Feel free to offer any other feedback you would like:
+            <textarea id="custom-feedback" rows="3" cols="30"></textarea></label>
+
+            <input type="submit" id="submit" value="Submit">       
+
+                
+
+        </fieldset>
+
+
+
+      </form>
+    </div>
+
+  </body>
+</html>
